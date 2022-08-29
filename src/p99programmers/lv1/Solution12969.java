@@ -1,4 +1,4 @@
-package p99programmers;
+package p99programmers.lv1;
 
 import java.util.Scanner;
 
