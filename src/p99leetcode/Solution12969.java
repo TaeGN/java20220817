@@ -1,4 +1,4 @@
-package p99programmers.lv1;
+package p99leetcode;
 
 import java.util.Scanner;
 

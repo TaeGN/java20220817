@@ -1,4 +1,4 @@
-package p99programmers.lv1;
+package p99leetcode;
 
 class Solution12912 {
 	// https://school.programmers.co.kr/learn/courses/30/lessons/12912

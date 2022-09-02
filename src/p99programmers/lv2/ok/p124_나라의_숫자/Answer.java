@@ -1,4 +1,4 @@
-package p99programmers.lv2.p124_나라의_숫자;
+package p99programmers.lv2.ok.p124_나라의_숫자;
 
 public class Answer {
 

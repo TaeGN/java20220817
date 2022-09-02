@@ -1,4 +1,4 @@
-package p99programmers.lv2.문자열_압축;
+package p99programmers.lv2.no.문자열_압축;
 
 public class Solution2 {
 	public static void main(String[] args) {

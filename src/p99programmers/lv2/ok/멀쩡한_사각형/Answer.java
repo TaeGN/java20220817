@@ -1,4 +1,4 @@
-package p99programmers.lv2.멀쩡한_사각형;
+package p99programmers.lv2.ok.멀쩡한_사각형;
 
 public class Answer {
 
