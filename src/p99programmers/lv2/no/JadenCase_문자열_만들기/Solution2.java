@@ -1,4 +1,4 @@
-package p99programmers.lv2.JadenCase_문자열_만들기;
+package p99programmers.lv2.no.JadenCase_문자열_만들기;
 
 public class Solution2 {
 	public static void main(String[] args) {
@@ -8,6 +8,7 @@ public class Solution2 {
 		
 		for(int i = 0; i < s.length(); i++) {
 			while(s.charAt(i) == ' ' && i < s.length()-1) {
+				answer += " ";
 				i++;
 			}
 			n = i;
@@ -19,7 +20,9 @@ public class Solution2 {
 			while(s.charAt(i) != ' ' && i < s.length()-1) {
 				i++;
 			}
-			answer += s.substring(n+1, i).toLowerCase();
+			if(n != s.length()-1) {
+				answer += s.substring(n+1, i).toLowerCase();
+			}
 		}
 		
 		System.out.println(answer);
