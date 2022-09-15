@@ -1,0 +1,17 @@
+package ch15.book.exercise.p07;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BoardDao {
+
+	public List<Board> getBoardList() {
+		// TODO Auto-generated method stub
+		List<Board> list = new ArrayList<Board>();
+		for(int i = 1; i <= 3; i++) {
+			list.add(new Board("제목" + i, "내용" + i));
+		}
+		return list;
+	}
+
+}
