@@ -41,6 +41,10 @@ public class LambdaExample {
 			this.mathScore = mathScore;
 		}
 
+		public Student(int i, String string) {
+			// TODO Auto-generated constructor stub
+		}
+
 		public String getName() {
 			return name;
 		}
