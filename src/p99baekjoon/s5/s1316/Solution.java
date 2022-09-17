@@ -1,4 +1,4 @@
-package p99baekjoon.s1316;
+package p99baekjoon.s5.s1316;
 
 import java.util.ArrayList;
 import java.util.Arrays;
