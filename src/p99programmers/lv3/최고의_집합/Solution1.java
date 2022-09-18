@@ -1,7 +1,6 @@
 package p99programmers.lv3.최고의_집합;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Solution1 {
@@ -15,16 +14,7 @@ public class Solution1 {
 	
 	private static List<Integer> solution(int n, int s) {
         List<Integer> list = new ArrayList<>();
-        if(s * 2 < n * (n + 1)) {
-        	list.add(-1);
-        	return list;
-        }
-        if((2 * s - n * (n - 1)) % (2 * n) == 0) {
-        	int num = (2 * s - n * (n - 1)) / (2 * n);
-        	for(int i = 0; i < n; i++) {
-        		list.add(num + i);
-        	}
-        }
+        
         
         
         return list;
