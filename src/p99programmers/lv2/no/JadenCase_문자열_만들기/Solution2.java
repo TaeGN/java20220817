@@ -1,4 +1,4 @@
-package p99programmers.lv2.ok.JadenCase_문자열_만들기;
+package p99programmers.lv2.no.JadenCase_문자열_만들기;
 
 public class Solution2 {
 	public static void main(String[] args) {

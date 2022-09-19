@@ -1,47 +1,43 @@
 package p99leetcode;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class S1684 {
 	public static void main(String[] args) {
+		
+//		String str = "aacceeaa";
+//		System.out.println(str.replace("a", ""));
+		
+		
 		String allowed = "ab";
-		String[] words = new String[] {"ad","bd","aaab","baa","badab"};
-		
-		int answer1 = countConsistentStrings1(allowed, words);
-		int answer2 = countConsistentStrings2(allowed, words);
-		
-		System.out.println(answer1);
-		System.out.println(answer2);
-		
-	}
+		String[] words = {"a","b","c","ab","ac","bc","abc"};
+		String[] arr = new String[words.length];
+		String str = "";
+		int count = 0;
 
-	private static int countConsistentStrings2(String allowed, String[] words) {
 		
-		return 0;
-	}
-
-	private static int countConsistentStrings1(String allowed, String[] words) {
-		Set<Character> set = new HashSet<>();
-		int count = words.length;
-		for(int i = 0; i < allowed.length(); i++) {
-			set.add(allowed.charAt(i));
-		}
-		for(int i = 0; i < words.length; i++) {
-			Set<Character> set1 = new HashSet<>(set);
-			System.out.println(set1);
-			for(int j = 0; j < words[i].length(); j++) {
-				if(set1.add(words[i].charAt(j))) {
-					count--;
-					break;
-				}
-			}
-			
-		}
+//		System.out.println(words[0]);
+//		words[0].replaceAll(String.valueOf(allowed.charAt(0)),"b");
+//		System.out.println(words[0]);
+//		System.out.println(Arrays.toString(words));
 		
-		return count;
+//		for(int i = 0; i < words.length; i++) {
+//			words[i].replace(allowed, "z");
+//			System.out.println(words[i]);
+////		}
+        for(int i = 0; i < allowed.length(); i++) {
+            for(int j = 0; j < words.length; j++) {
+            	str = String.valueOf(allowed.charAt(i));
+            	arr[j] = words[j].replaceAll(str,"");
+            	System.out.println(arr[j]);
+            }
+        }
+        for(int i = 0; i < arr.length; i++) {
+        	if(arr[i].length() == 0) {
+        		count++;
+        	}
+        }
+        System.out.println(count);
+		
 	}
 }
-
-
