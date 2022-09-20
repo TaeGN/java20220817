@@ -1,15 +1,31 @@
 package p99leetcode.assignment01;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class S1748 {
 	public static void main(String[] args) {
 		int[] nums = {1,2,3,2};
-		int answer = sumOfUnique(nums);
+		int answer = sumOfUniqueStream(nums);
 		System.out.println(answer);
 	}
 
+	private static int sumOfUniqueStream(int[] nums) {
+		return Arrays.stream(nums)
+			.boxed()
+			.collect(Collectors.groupingBy(e -> e, Collectors.counting()))
+			.entrySet()
+			.stream()
+			.filter(e -> e.getValue() == 1)
+			.mapToInt(e -> e.getKey())
+			.sum();
+		
+	}
+	
+	
+	
 	private static int sumOfUnique(int[] nums) {
 		int[] counts = new int[101];
 		int answer = 0;

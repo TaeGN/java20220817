@@ -1,10 +1,25 @@
 package p99leetcode.assignment01;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class S2206 {
 	public static void main(String[] args) {
 		int[] nums = {3,2,3,2,2,2};
 		boolean answer = divideArray(nums);
 		System.out.println(answer);
+	}
+	
+	
+	private static boolean divideArray2(int[] nums) {
+		Arrays.stream(nums)
+			.boxed()
+			.collect(Collectors.groupingBy(e -> e, Collectors.counting()))
+			.entrySet()
+			.stream()
+			.
+		
+		return false;
 	}
 
 	private static boolean divideArray(int[] nums) {
