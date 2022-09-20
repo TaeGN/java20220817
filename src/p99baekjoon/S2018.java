@@ -17,11 +17,8 @@ public class S2018 {
 				if((2 * n - i * i + i) / (2 * i) < 1) {
 					break;
 				}
-				if(((2 * n - i * i + i) / (2 * i)) + i - 1 <= n) {
-					System.out.println((2 * n - i * i + i) / (2 * i));
-					count++;
-				}
-				
+				System.out.println((2 * n - i * i + i) / (2 * i));
+				count++;
 			}
 		}
 		return count;
