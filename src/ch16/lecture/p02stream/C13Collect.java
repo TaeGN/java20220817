@@ -6,11 +6,11 @@ import java.util.stream.IntStream;
 
 public class C13Collect {
 	public static void main(String[] args) {
-		List<Integer> list = IntStream.range(1, 100)
+		List<Integer> list1 = IntStream.range(1, 100)
 			.filter(n -> n % 2 == 0)
 			.boxed()
 			.collect(Collectors.toList());
 		
-		System.out.println(list);
+		System.out.println(list1);
 	}
 }
