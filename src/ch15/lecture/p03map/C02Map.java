@@ -7,14 +7,12 @@ import java.util.Set;
 public class C02Map {
 	public static void main(String[] args) {
 		// 전체 entry 탐색
-		
 		Map<String, String> map = new HashMap<>();
 		map.put("korea", "seoul");
 		map.put("japan", "tokyo");
 		map.put("us", "new york");
 		map.put("uk", "london");
 		map.put("france", "paris");
-		
 		// keySet 이용
 		System.out.println("keySet 이용");
 		Set<String> keys = map.keySet();
