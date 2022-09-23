@@ -1,4 +1,4 @@
-package p99programmers.lv2.짝지어_제거하기;
+package p99programmers.lv2.ok.짝지어_제거하기;
 
 public class Solution2 {
 	public static void main(String[] args) {
