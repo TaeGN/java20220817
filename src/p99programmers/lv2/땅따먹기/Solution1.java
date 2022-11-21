@@ -15,16 +15,31 @@ public class Solution1 {
 	}
 
 	private static int Sol1(int[][] land) {
-		int r = land.length;
-		int c = land[0].length;
-		Map<Integer, Integer> map = new HashMap<>();
+		int rowLen = land.length;
 		int sum = 0;
-		for(int i = 0; i < r; i++) {
-			for(int j = 0; j < c; j++) {
-				
+		int row = 0;
+		int prev = -1;
+		EatGround(row, rowLen, land, sum, prev);
+		
+		
+			
+		return result;
+	}
+	
+	static int result = 0;
+	private static void EatGround(int row, int rowLen, int[][] land, int sum, int prev) {
+		if(rowLen <= row) {
+			if(result < sum) {
+				System.out.println(sum);
+				result = sum;
+				return;
 			}
 		}
-			
-		return 0;
+		
+		for(int pos = 0; pos < land[0].length; pos++) {
+			if(pos != prev) {
+				EatGround(row + 1, rowLen, land, sum + land[row][pos], pos);	
+			}
+		}
 	}
 }
