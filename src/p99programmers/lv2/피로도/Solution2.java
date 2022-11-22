@@ -1,13 +1,8 @@
 package p99programmers.lv2.피로도;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-public class Solution1 {
+public class Solution2 {
 	public static void main(String[] args) {
 		int k = 80;
 		int[][] dungeons = {
@@ -22,10 +17,10 @@ public class Solution1 {
 	static int result = 0;
 	private static int Sol1(int k, int[][] dungeons) {
 		Arrays.sort(dungeons, (a, b) -> {
-			if(a[0] == b[0]) {
-				return Integer.compare(a[1], b[1]);
-			} else {
+			if(a[1] == b[1]) {
 				return Integer.compare(b[0], a[0]);
+			} else {
+				return Integer.compare(a[1], b[1]);
 			}
 		});
 		
@@ -59,3 +54,4 @@ public class Solution1 {
 		}
 	}
 }
+
